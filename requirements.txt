@@ -1,0 +1,6 @@
+numpy==1.22.4
+pandas==1.4.4
+Pillow==9.2.0
+plotly==5.10.0
+pycountry_convert==0.7.2
+streamlit==1.13.0
