@@ -6,10 +6,10 @@ from Streamlit_plots.vpot_plots import plot_streamlit_vpot
 from Streamlit_plots.ambv_plots import plot_streamlit_ambv
 from Streamlit_plots.ambcass_plots import main_ambcass
 
-ambcass = pd.read_csv('../data/Aggregated_Metrics_By_Country_And_Subscriber_Status.csv')
-ambv = pd.read_csv('../data/Aggregated_Metrics_By_Video.csv').iloc[1:].reset_index(drop=True)
-acv = pd.read_csv('../data/All_Comments_Final.csv')
-vpot = pd.read_csv('../data/Video_Performance_Over_Time.csv')
+ambcass = pd.read_csv('data/Aggregated_Metrics_By_Country_And_Subscriber_Status.csv')
+ambv = pd.read_csv('data/Aggregated_Metrics_By_Video.csv').iloc[1:].reset_index(drop=True)
+acv = pd.read_csv('data/All_Comments_Final.csv')
+vpot = pd.read_csv('data/Video_Performance_Over_Time.csv')
 
 # "vpot" dataset changes
 vpot['Date'] = pd.to_datetime(vpot['Date'])
@@ -47,6 +47,10 @@ if fn == filenames[0]:
 elif fn == filenames[1]:
     plot_streamlit_ambv(ambv)
 elif fn == filenames[2]:
-    pass 
+    st.write(""" 
+    # Coming soon
+
+    ### Maybe.......
+    """)
 else:
     plot_streamlit_vpot(vpot)
