@@ -2,9 +2,9 @@ import pandas as pd
 import streamlit as st
 import re
 import pycountry_convert as pc
-from vpot_plots import plot_streamlit_vpot
-from ambv_plots import plot_streamlit_ambv
-from ambcass_plots import main_ambcass
+from Streamlit_plots.vpot_plots import plot_streamlit_vpot
+from Streamlit_plots.ambv_plots import plot_streamlit_ambv
+from Streamlit_plots.ambcass_plots import main_ambcass
 
 ambcass = pd.read_csv('../data/Aggregated_Metrics_By_Country_And_Subscriber_Status.csv')
 ambv = pd.read_csv('../data/Aggregated_Metrics_By_Video.csv').iloc[1:].reset_index(drop=True)
